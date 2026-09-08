@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Zeeshan ❤️</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 15px;
+    color: #333;
+  }
+
+  .bg-hearts {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .heart-particle {
+    position: absolute; bottom: -10%; font-size: 20px;
+    animation: floatUp 7s infinite linear; opacity: 0.7;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+  }
+
+  .card-container {
+    position: relative; z-index: 10;
+    background: rgba(255, 255, 255, 0.93);
+    backdrop-filter: blur(10px);
+    border-radius: 24px; padding: 30px 20px;
+    max-width: 450px; width: 100%;
+    box-shadow: 0 20px 40px rgba(214, 51, 132, 0.3);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+  }
+
+  .screen { display: none; animation: fadeIn 0.5s ease-in-out forwards; }
+  .screen.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1.fancy-title {
+    font-family: 'Great Vibes', cursive; font-size: 42px;
+    color: #d63384; margin-bottom: 10px;
+  }
+  h2 { color: #c2185b; font-size: 22px; margin-bottom: 15px; }
+  p { font-size: 14px; line-height: 1.6; color: #555; margin-bottom: 15px; }
+
+  .btn {
+    background: linear-gradient(45deg, #ff4081, #e91e63);
+    color: white; border: none; padding: 12px 28px;
+    border-radius: 30px; font-size: 15px; font-weight: 600;
+    cursor: pointer; box-shadow: 0 8px 15px rgba(233, 30, 99, 0.3);
+    margin-top: 15px; transition: 0.3s;
+  }
+  .btn:hover { transform: scale(1.05); }
+
+  /* Balloon Pop Styling */
+  .balloon-grid { display: flex; justify-content: center; gap: 15px; margin: 25px 0; }
+  .balloon { font-size: 50px; cursor: pointer; user-select: none; transition: transform 0.2s; }
+  .balloon:active { transform: scale(1.3); }
+  .balloon.popped { visibility: hidden; opacity: 0; transform: scale(0); }
+
+  .profile-pic {
+    width: 140px; height: 140px; border-radius: 50%;
+    object-fit: cover; border: 4px solid #ff4081;
+    margin: 15px auto; box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .couple-pic {
+    width: 100%; max-height: 250px; border-radius: 16px;
+    object-fit: cover; border: 3px solid #ff4081; margin-top: 15px;
+  }
+
+  .gift-box { font-size: 80px; cursor: pointer; animation: pulse 1.5s infinite; margin: 20px 0; }
+  @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+
+  .reasons-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    max-height: 320px; overflow-y: auto; padding: 5px; margin-bottom: 15px;
+  }
+  .reason-card {
+    background: #fff0f5; border: 1.5px solid #ffb6c1; border-radius: 12px;
+    padding: 12px 8px; font-size: 12px; font-weight: 600; color: #d63384;
+    cursor: pointer; min-height: 65px; display: flex; align-items: center;
+    justify-content: center; transition: 0.3s; text-align: center;
+  }
+  .reason-card.open { background: #d63384; color: white; border-color: #d63384; }
+
+  .heart-nested {
+    font-size: 90px; cursor: pointer; transition: transform 0.3s;
+    user-select: none; margin: 20px 0; display: inline-block;
+  }
+  .heart-nested:hover { transform: scale(1.15); }
+
+  .kiss-emoji { font-size: 40px; animation: popKiss 0.8s ease-out forwards; display: inline-block; margin: 5px; }
+  @keyframes popKiss {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .cake-box { margin: 20px 0; position: relative; }
+  .cake-emoji { font-size: 90px; cursor: pointer; display: inline-block; }
+  .candle-flame {
+    font-size: 28px; position: absolute; top: -10px; left: 50%;
+    transform: translateX(-50%); animation: flicker 0.8s infinite alternate;
+  }
+  @keyframes flicker { 0% { opacity: 0.8; } 100% { opacity: 1; } }
+
+  .letter-box {
+    background: #fff5f8; border: 2px dashed #f8bbd0;
+    border-radius: 16px; padding: 18px; text-align: left;
+    font-size: 13.5px; color: #444; line-height: 1.7; margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-hearts" id="bgHearts"></div>
+
+<div class="card-container">
+
+  <!-- SCREEN 1: Pop Balloons First! -->
+  <div class="screen active" id="screen1">
+    <h1 class="fancy-title">Welcome My Love! ❤️</h1>
+    <h2>Pop All 4 Balloons! 🎈</h2>
+    <p>Burst every balloon to unlock your birthday surprise!</p>
+    <div class="balloon-grid">
+      <span class="balloon" onclick="popBalloon(this)">🎈</span>
+      <span class="balloon" onclick="popBalloon(this)">🎈</span>
+      <span class="balloon" onclick="popBalloon(this)">🎈</span>
+      <span class="balloon" onclick="popBalloon(this)">🎈</span>
+    </div>
+    <button class="btn" id="balloonNextBtn" style="display: none;" onclick="nextScreen(2)">Open My Surprise ✨</button>
+  </div>
+
+  <!-- SCREEN 2: Welcome & Zeeshan Photo -->
+  <div class="screen" id="screen2">
+    <h1 class="fancy-title">Happy Birthday! 🎉</h1>
+    <img src="zeeshan.jpg" alt="Zeeshan" class="profile-pic" onerror="this.src='https://via.placeholder.com/150/ff4081/ffffff?text=Zeeshan'">
+    <h2>My Handsome Zeeshan</h2>
+    <p>I crafted a special journey full of love & surprises just for you today!</p>
+    <button class="btn" onclick="nextScreen(3)">Pop Gift Box 🎁</button>
+  </div>
+
+  <!-- SCREEN 3: Pop The Gift Surprise -->
+  <div class="screen" id="screen3">
+    <h2>Pop Your Gift Box! 🎁</h2>
+    <p>Tap the gift box below to reveal a special memory...</p>
+    <div class="gift-box" id="giftBox" onclick="openGift()">🎁</div>
+    <div id="giftContent" style="display: none;">
+      <img src="us.jpg" alt="Us Together" class="couple-pic" onerror="this.src='https://via.placeholder.com/300x200/ff4081/ffffff?text=Our+Special+Memory'">
+      <p style="margin-top: 10px; font-weight: 600; color: #d63384;">Together is my favorite place to be! 💕</p>
+      <button class="btn" onclick="nextScreen(4)">10 Reasons I Love You 💖</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 4: 10 Reasons Why I Love You -->
+  <div class="screen" id="screen4">
+    <h2>10 Reasons Why I Love You 💖</h2>
+    <p>Tap every heart card to read a reason!</p>
+    <div class="reasons-grid">
+      <div class="reason-card" onclick="revealReason(this, '1. Your caring heart ❤️')">Tap #1</div>
+      <div class="reason-card" onclick="revealReason(this, '2. Your cute smile 😊')">Tap #2</div>
+      <div class="reason-card" onclick="revealReason(this, '3. You always support me ✨')">Tap #3</div>
+      <div class="reason-card" onclick="revealReason(this, '4. Your warm hugs 🫂')">Tap #4</div>
+      <div class="reason-card" onclick="revealReason(this, '5. How you make me laugh 🤭')">Tap #5</div>
+      <div class="reason-card" onclick="revealReason(this, '6. You are my safe place 🏡')">Tap #6</div>
+      <div class="reason-card" onclick="revealReason(this, '7. Your endless patience 🤍')">Tap #7</div>
+      <div class="reason-card" onclick="revealReason(this, '8. How special you treat me 👑')">Tap #8</div>
+      <div class="reason-card" onclick="revealReason(this, '9. Your loving eyes 👁️❤️')">Tap #9</div>
+      <div class="reason-card" onclick="revealReason(this, '10. Simply because you are YOU! 🥰')">Tap #10</div>
+    </div>
+    <button class="btn" id="reasonsNextBtn" style="display: none;" onclick="nextScreen(5)">Heart Surprise ➔</button>
+  </div>
+
+  <!-- SCREEN 5: Heart Inside Heart Surprise -->
+  <div class="screen" id="screen5">
+    <h2 id="heartTitle">Tap The Heart! ❤️</h2>
+    <p id="heartDesc">A secret is hidden deep inside...</p>
+    
+    <div id="heartContainer">
+      <div class="heart-nested" id="heart1" onclick="openHeart(1)">❤️</div>
+    </div>
+
+    <div id="kissExplosion" style="display: none; margin-top: 15px;">
+      <div class="kiss-emoji">💋</div><div class="kiss-emoji">😘</div><div class="kiss-emoji">💖</div><div class="kiss-emoji">💋</div><div class="kiss-emoji">😍</div>
+      <p style="font-weight: 700; color: #d63384; font-size: 18px; margin-top: 10px;">Sending You Million Kisses & Pure Love! 💋✨</p>
+      <button class="btn" onclick="nextScreen(6)">Make A Wish 🎂</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 6: Cake Cutting -->
+  <div class="screen" id="screen6">
+    <h2>Make A Wish & Blow! 🕯️</h2>
+    <p>Tap the cake to blow out candles & cut the cake!</p>
+    <div class="cake-box" onclick="cutCake()">
+      <div class="candle-flame" id="flame">🔥</div>
+      <div class="cake-emoji" id="cake">🎂</div>
+    </div>
+    <button class="btn" id="cakeNextBtn" style="display: none;" onclick="nextScreen(7)">Read Final Letter 💌</button>
+  </div>
+
+  <!-- SCREEN 7: Final Note -->
+  <div class="screen" id="screen7">
+    <h1 class="fancy-title">Happy Birthday Zeeshan! 🎉</h1>
+    <div class="letter-box">
+      <p>My Dearest Zeeshan ❤️,</p>
+      <p>On your special day, I want to tell you that having you in my life is my biggest blessing. You bring so much joy, love, and light into my world.</p>
+      <p>May all your dreams come true, and may Allah bless you with good health, happiness, and eternal success. I am so lucky to be yours forever!</p>
+      <p style="text-align: right; font-weight: bold; color: #d63384; margin-top: 10px;">Always & Forever Yours 💕</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const heartsBg = document.getElementById('bgHearts');
+  const heartEmojis = ['💖', '💗', '💕', '🌸', '✨', '❤️'];
+  for (let i = 0; i < 22; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart-particle';
+    heart.innerText = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+    heart.style.animationDelay = (Math.random() * 5) + 's';
+    heartsBg.appendChild(heart);
+  }
+
+  function nextScreen(num) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen' + num).classList.add('active');
+  }
+
+  let poppedCount = 0;
+  function popBalloon(el) {
+    if (!el.classList.contains('popped')) {
+      el.classList.add('popped');
+      poppedCount++;
+      if (poppedCount === 4) {
+        document.getElementById('balloonNextBtn').style.display = 'inline-block';
+      }
+    }
+  }
+
+  function openGift() {
+    document.getElementById('giftBox').style.display = 'none';
+    document.getElementById('giftContent').style.display = 'block';
+  }
+
+  let openedCount = 0;
+  function revealReason(el, text) {
+    if (!el.classList.contains('open')) {
+      el.classList.add('open');
+      el.innerText = text;
+      openedCount++;
+      if (openedCount === 10) {
+        document.getElementById('reasonsNextBtn').style.display = 'inline-block';
+      }
+    }
+  }
+
+  function openHeart(step) {
+    const container = document.getElementById('heartContainer');
+    const title = document.getElementById('heartTitle');
+    const desc = document.getElementById('heartDesc');
+
+    if (step === 1) {
+      title.innerText = "Touch The Inner Heart! 💖";
+      desc.innerText = "Going deeper into my heart...";
+      container.innerHTML = '<div class="heart-nested" id="heart2" onclick="openHeart(2)">💖</div>';
+    } else if (step === 2) {
+      title.innerText = "One Last Touch! 💞";
+      desc.innerText = "Almost reached my deepest feeling!";
+      container.innerHTML = '<div class="heart-nested" id="heart3" onclick="openHeart(3)">💞</div>';
+    } else if (step === 3) {
+      title.innerText = "Surprise! 💋🎉";
+      desc.style.display = 'none';
+      container.style.display = 'none';
+      document.getElementById('kissExplosion').style.display = 'block';
+    }
+  }
+
+  function cutCake() {
+    document.getElementById('flame').style.display = 'none';
+    document.getElementById('cake').innerText = '🍰';
+    document.getElementById('cakeNextBtn').style.display = 'inline-block';
+  }
+</script>
+
+</body>
+</html>
